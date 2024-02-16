@@ -1,0 +1,43 @@
+ <%= form_with model: @product, class: "w-full" do |form| %>
+
+            <div class = "flex-col justify-center items-center p-2">
+                <%= form.label :product_name %>
+                <%= form.text_field :product_name, class: "w-full focus:border-blue-500 focus:outline-none border-neutral-400" %>
+            </div>
+
+            <div class = "flex-col justify-center items-center p-2">
+                <%= form.label :description %>
+                <%= form.text_area :description, class: "w-full resize-none focus:border-blue-500 focus:outline-none border-neutral-400" %>
+            </div>
+
+            <div class = "flex-col justify-center items-center p-2">
+                <%= form.label :image_url %>
+                <%= form.text_field :image_url, class: "w-full focus:border-blue-500 focus:outline-none border-neutral-400" %>
+            </div>
+
+            <div class = "flex-col justify-center items-center p-2">
+                <%= form.label :price %>
+                <%= form.text_field :price, type: "number", class: "w-full remove-arrow focus:border-blue-500 focus:outline-none border-neutral-400" %>
+            </div>
+
+            <div class = "flex-col justify-center items-center p-2">
+                <%= form.label :quantity %>
+                <%= form.text_field :quantity, type: "number", class: "w-full remove-arrow focus:border-blue-500 focus:outline-none border-neutral-400" %>
+            </div>
+
+            <% if @product.errors.any? %>
+                <div class = " text-red-500 text-sm text-center p-5">
+                    <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved: </h2>
+                    <ul>
+                        <% @product.errors.each do |error| %>
+                        <li><%= error.full_message %></li>
+                        <% end %>
+                    </ul>
+                </div>
+            <% end %>
+
+            <div class = "flex justify-center p-2">
+                <%= form.submit "Submit", class: "px-10 py-3 rounded-lg bg-blue-500 text-white" %>
+            </div>
+
+        <% end %>

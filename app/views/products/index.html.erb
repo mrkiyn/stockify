@@ -1,0 +1,43 @@
+<div class = "w-full h-screen flex justify-center items-center">
+    <div class = "w-3/5 h-5/6 flex flex-col justify-center items-center">
+        <div class = "w-full p-4 flex justify-end bg-neutral-200 rounded-t-lg border border-neutral-300">
+            <%= link_to "Add New Product",  new_product_path, class: "bg-blue-500 px-5 py-2 rounded-lg text-white" %>
+        </div>
+        <div class = "w-full p-2 flex justify-around bg-neutral-200 border-l border-r border-neutral-300">
+            <p class = "text-green-500"><%= notice %></p>
+        </div>
+        <div  class = "w-full h-5/6 bg-neutral-200 overflow-scroll overscroll rounded-b-lg border-l border-r border-b border-neutral-300">
+            <table class = "text-center w-full min-w-full">
+                <thead class = "w-full">
+                    <tr>
+                        <th class = "p-4">Product Name</th>
+                        <th class = "p-4">Description</th>
+                        <th class = "p-4">Price</th>
+                        <th class = "p-4">Quantity</th>
+                        <th class = "p-4">Action</th>
+                    </tr>
+                </thead>
+                <tbody class = "w-full">
+                    <% @products.each do |product| %>
+                    <tr>
+                        <td class = "p-4 underline underline-offset-2 font-medium"><%= link_to product.product_name, product_path(product) %></td>
+                        <td class = "p-4"><%= product.description%></td>
+                        <td class = "p-4">
+                            <% if product.price != nil %>
+                                P<%= product.price%>.00
+                            <% end %>
+                        </td>
+                        <td class = "p-4"><%= product.quantity%></td>
+                        <td class = "p-4 flex justify-center">
+                            <%= link_to edit_product_path(product), class: "bg-blue-500 size-8 rounded-lg mx-1 flex justify-center items-center" do %><i class="fa-solid fa-pen text-white"></i><% end %>
+                            <%= button_to product_path(product), method: :delete, class: "bg-red-500 size-8 rounded-lg mx-1 flex justify-center items-center" do %>
+                                <i class="fa-solid fa-trash text-white"></i>
+                            <% end %>
+                        </td>
+                    </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

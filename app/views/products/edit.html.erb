@@ -1,0 +1,15 @@
+<div class = "w-full h-screen flex justify-center items-center">
+    <div class = "w-1/5 h-4/6 flex flex-col justify-center items-center rounded-lg bg-neutral-200 border border-neutral-300 p-2">
+
+        <div class = "w-full text-center text-xl">
+            <h1>Add New Product</h1>
+        </div>
+
+        <div class = "w-full flex items-center">
+
+            <%= render partial: 'form', locals: {product: @product} %>
+
+        </div>
+
+    </div>
+</div>
