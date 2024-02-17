@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
   # Defines the root path route ("/")
   # root "posts#index"
-
+  #
   get '/products', to: 'products#index', as: :products
 
   get '/products/new', to: 'products#new' , as: :new_product
