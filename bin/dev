@@ -5,10 +5,10 @@ if ! gem list foreman -i --silent; then
   gem install foreman
 fi
 
-if Rails.env.development?
+if Rails.env.development?; then
   # Default to port 3000 if not specified
   export PORT="${PORT:-3000}"
-end
+fi
 
 
 # Let the debug gem allow remote connections,
