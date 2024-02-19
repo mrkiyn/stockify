@@ -1,5 +1,5 @@
 <div class = "h-screen flex flex-col justify-center items-center">
-    <div class = "w-1/5 h-2/5 flex flex-col justify-center items-center bg-neutral-200 rounded-lg border border-neutral-300 p-3">
+    <div class = "w-1/5 h-2/5 flex flex-col justify-center items-center bg-stone-800 rounded-lg border border-stone-700 p-3">
         <%= image_tag @product.image_url, alt: @product.product_name, class: "size-28"%>
         <div class = "pt-4">
             <h2 class = "text-center text-2xl font-semibold underline"><%= @product.product_name%></h2>
@@ -9,7 +9,7 @@
             <h3 class = "text-center pt-3">Price: P <%= @product.price%>.00</h3>
             <h3 class = "text-center">In Stock: <%= @product.quantity%> Pcs.</h3>
         </div>
-        <div class = "w-full flex justify-evenly py-1">
+        <div class = "w-full flex justify-evenly py-2">
             <%= link_to edit_product_path(@product), class: "bg-blue-500 px-4 py-2 rounded-lg flex justify-between items-center" do %>
                 <i class="fa-solid fa-pen text-white px-1"></i>
                 <p class = "text-sm text-white px-1">UPDATE</p>

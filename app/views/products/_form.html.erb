@@ -2,27 +2,27 @@
 
             <div class = "flex-col justify-center items-center p-2">
                 <%= form.label :product_name %>
-                <%= form.text_field :product_name, class: "w-full focus:border-blue-500 focus:outline-none border-neutral-400" %>
+                <%= form.text_field :product_name, class: "w-full bg-stone-700 focus:ring-2 focus:ring-green-500 focus:border-none  border-stone-700" %>
             </div>
 
             <div class = "flex-col justify-center items-center p-2">
                 <%= form.label :description %>
-                <%= form.text_area :description, class: "w-full resize-none focus:border-blue-500 focus:outline-none border-neutral-400" %>
+                <%= form.text_area :description, class: "w-full bg-stone-700 resize-none focus:ring-2 focus:ring-green-500  focus:border-none border-stone-700" %>
             </div>
 
             <div class = "flex-col justify-center items-center p-2">
                 <%= form.label :image_url %>
-                <%= form.text_field :image_url, class: "w-full focus:border-blue-500 focus:outline-none border-neutral-400" %>
+                <%= form.text_field :image_url, class: "w-full bg-stone-700 focus:ring-2 focus:ring-green-500 focus:border-none border-stone-700" %>
             </div>
 
             <div class = "flex-col justify-center items-center p-2">
                 <%= form.label :price %>
-                <%= form.text_field :price, type: "number", class: "w-full remove-arrow focus:border-blue-500 focus:outline-none border-neutral-400" %>
+                <%= form.text_field :price, type: "number", class: "w-full bg-stone-700 remove-arrow focus:ring-2 focus:ring-green-500 focus:border-none border-stone-700" %>
             </div>
 
             <div class = "flex-col justify-center items-center p-2">
                 <%= form.label :quantity %>
-                <%= form.text_field :quantity, type: "number", class: "w-full remove-arrow focus:border-blue-500 focus:outline-none border-neutral-400" %>
+                <%= form.text_field :quantity, type: "number", class: "w-full bg-stone-700 remove-arrow focus:ring-2 focus:ring-green-500 focus:border-none border-stone-700" %>
             </div>
 
             <% if @product.errors.any? %>
@@ -37,7 +37,7 @@
             <% end %>
 
             <div class = "flex justify-center p-2">
-                <%= form.submit "Submit", class: "px-10 py-3 rounded-lg bg-blue-500 text-white" %>
+                <%= form.submit "Submit", class: "px-10 py-3 rounded-lg bg-green-500 text-white" %>
             </div>
 
         <% end %>

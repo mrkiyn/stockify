@@ -1,12 +1,12 @@
 <div class = "w-full h-screen flex justify-center items-center">
     <div class = "w-3/5 h-5/6 flex flex-col justify-center items-center">
-        <div class = "w-full p-4 flex justify-end bg-neutral-200 rounded-t-lg border border-neutral-300">
-            <%= link_to "Add New Product",  new_product_path, class: "bg-blue-500 px-5 py-2 rounded-lg text-white" %>
+        <div class = "w-full p-4 flex justify-end bg-stone-800 rounded-t-lg border border-stone-700">
+            <%= link_to "Add New Product",  new_product_path, class: "bg-green-500 px-5 py-2 rounded-lg text-white" %>
         </div>
-        <div class = "w-full p-2 flex justify-around bg-neutral-200 border-l border-r border-neutral-300">
+        <div class = "w-full p-2 flex justify-around bg-stone-800 border-l border-r border-stone-700">
             <p class = "text-green-500"><%= notice %></p>
         </div>
-        <div  class = "w-full h-5/6 bg-neutral-200 overflow-scroll overscroll rounded-b-lg border-l border-r border-b border-neutral-300">
+        <div  class = "w-full h-5/6 bg-stone-800 overflow-scroll overscroll rounded-b-lg border-l border-r border-b border-stone-700">
             <table class = "text-center w-full min-w-full">
                 <thead class = "w-full">
                     <tr>
@@ -29,7 +29,7 @@
                         </td>
                         <td class = "p-4"><%= product.quantity%></td>
                         <td class = "p-4 flex justify-center">
-                            <%= link_to edit_product_path(product), class: "bg-blue-500 size-8 rounded-lg mx-1 flex justify-center items-center" do %><i class="fa-solid fa-pen text-white"></i><% end %>
+                            <%= link_to edit_product_path(product), class: "bg-green-500 size-8 rounded-lg mx-1 flex justify-center items-center" do %><i class="fa-solid fa-pen text-white"></i><% end %>
                             <%= button_to product_path(product), method: :delete, class: "bg-red-500 size-8 rounded-lg mx-1 flex justify-center items-center" do %>
                                 <i class="fa-solid fa-trash text-white"></i>
                             <% end %>
